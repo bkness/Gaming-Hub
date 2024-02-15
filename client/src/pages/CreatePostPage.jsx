@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Navbar from './Navbar';
 
+// the logic for handling create a post, should possibly be intergrated with Comments.jsx 
 const CreatePostPage = ({ refetchPosts }) => {
     const navigate = useNavigate();
     const [newPost, setNewPost] = useState({ title: '', content: '' });
@@ -26,6 +27,7 @@ const CreatePostPage = ({ refetchPosts }) => {
         },
     });
 
+    // handles add post 
     const handleAddPost = async (e) => {
         e.preventDefault();
         try {
@@ -83,8 +85,6 @@ const CreatePostPage = ({ refetchPosts }) => {
 
             </div>
             </div>
-            
-           
         </div>
     );
 };

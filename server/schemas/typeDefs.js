@@ -1,5 +1,5 @@
 const typeDefs = `
-
+// all of our types and inputes matching the resolvers to make the front end functionality work
 type User {
     _id: ID!
     username: String!
@@ -76,7 +76,12 @@ type Game {
     updatedAt: String
   }
 
-
+  type LogoutResponse {
+    success: Boolean
+    message: String
+  }
+ 
+  // Mutations to call on in the front end described by our typeDefs
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
@@ -90,6 +95,8 @@ type Game {
     deleteComment(id: ID!): ID!
     deleteFromWishlist(gameId: ID!): User
     deleteFromCurrentlyPlaying(gameId: ID!): User
+    logout: LogoutResponse
+
 }
 `
 

@@ -5,6 +5,7 @@ import { GET_ALL_POSTS } from '../utils/queries';
 import Navbar from './Navbar';
 import Button from '@mui/material/Button';
 
+// home forum page logic 
 const ForumPage = () => {
     const { loading, error, data } = useQuery(GET_ALL_POSTS);
     const posts = data?.getAllPosts;
@@ -58,10 +59,9 @@ const ForumPage = () => {
                             <p className="created-at"> {new Date(parseInt(post.createdAt)).toLocaleDateString()}</p>
                             <p className='post-content'>{post.content}</p>
                             <div className='custom-button'>
+                            {/* grabs solo thread */}
                             <Button className='custom-button' variant='contained' component={Link} to={`/solo-thread/${post._id}`}>View Thread</Button>
                             </div>
-                            {/* needs proper pathing, made a successful backend query for solo post and added it to front end */}
-                            
                         </div>
                     ))}
                 </div>

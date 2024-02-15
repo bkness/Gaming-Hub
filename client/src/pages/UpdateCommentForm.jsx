@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { UPDATE_COMMENT } from '../utils/mutations'; 
 
+// update comment form that can be re used through the app
 const UpdateCommentForm = ({ comment, onSave }) => { 
     const [content, setContent] = useState(comment.content);
     const [updateComment] = useMutation(UPDATE_COMMENT);
@@ -25,6 +26,7 @@ const UpdateCommentForm = ({ comment, onSave }) => {
         setContent(e.target.value);
     };
 
+    // returns value of new content and submits update 
     return (
         <form onSubmit={handleSubmit}>
             <label>

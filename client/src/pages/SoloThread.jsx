@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Comments from './Comments';
 import CommentForm from './CommentForm';
 
+// grabs single post by id when user clicks view threads, then the user can make a comment on that post
 const SinglePostPage = () => {
     const { postId } = useParams();
     const { loading, error, data } = useQuery(GET_POST_BY_ID, {
