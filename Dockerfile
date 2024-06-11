@@ -15,6 +15,6 @@ RUN npm run build
 # Assuming the server serves static files from /app/public
 COPY./client/dist./public
 
-EXPOSE 3002
+EXPOSE 3001
 
 CMD ["node", "server.js"]
