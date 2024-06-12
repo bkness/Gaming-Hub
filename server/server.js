@@ -25,16 +25,12 @@ const startApolloServer = async () => {
 
   // if we're in production, serve client/dist as static assets
   if (process.env.NODE_ENV === 'production') {
-    // Construct an absolute path to the client/dist directory
-    const clientDistPath = path.resolve(__dirname, '..', 'client', 'dist');
-    console.log(`Serving static files from: ${clientDistPath}`); // Debugging line to confirm the path
-
-    app.use(express.static(clientDistPath));
+    app.use(express.static(path.join(__dirname, '../client/dist')));
 
     app.get('*', (req, res) => {
-      res.sendFile(path.join(clientDistPath, 'index.html'));
+      res.sendFile(path.join(__dirname, '../client/dist/index.html'));
     });
-  }
+  } 
 
   db.once('open', () => {
     app.listen(PORT, () => {
