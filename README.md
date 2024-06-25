@@ -39,7 +39,7 @@ Join us at Video Game Hub and unlock a world of limitless possibilities, where y
 
 - Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-- Or please just locate our website at [Game Hub](https://video-game-hub-project3.onrender.com/)
+- Or please just locate our website at [Video Game Hub](https://video-game-hub.onrender.com/)
 
 ## Credits
 Brandon Kelly - https://github.com/bkness \
