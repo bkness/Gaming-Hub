@@ -1,6 +1,5 @@
 import { gql } from '@apollo/client';
 
-// queries tested on backend sandbox 
 export const GET_USER_BY_ID = gql`
   query GetUserById($id: ID!) {
     getUserById(id: $id) {
@@ -62,6 +61,29 @@ export const QUERY_ME = gql`
   }
 }
 `
+// export const QUERY_ME = gql`
+// {
+//   me {
+//     _id
+//     username
+//     email
+//     bio
+//     avatar
+//     followers
+//     reviews
+//     wishlist {
+//       _id
+//       name
+//       gameId
+//       image
+//       platforms
+//       rating
+//       releaseDate
+//     }
+//     currentlyplaying
+//   }
+// }
+// `
 
 export const GET_ALL_POSTS = gql`
 query GetAllPosts {

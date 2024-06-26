@@ -9,7 +9,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/graphql': {
-        target: 'https://Video-Game-Hub.onrender.com',
+        target: 'https://video-game-hub.onrender.com',
         secure: false,
         changeOrigin: true
       }

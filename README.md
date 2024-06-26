@@ -27,7 +27,7 @@ Join us at Video Game Hub and unlock a world of limitless possibilities, where y
    cd your-project
 
    locate your package.json in your client folder and copy/paste `    "vite": "^4.4.5",
-    "@vitejs/plugin-react": "^4.0.3"` from the dependancies into the devDependancies section DO NOT DELETE the copied section you need both.
+    "@vitejs/plugin-react": "^4.0.3"` feomm the dependancies into the devDependancies section DO NOT DELETE the copied section you need both.
 
    npm install
 
@@ -39,7 +39,7 @@ Join us at Video Game Hub and unlock a world of limitless possibilities, where y
 
 - Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-- Or please just locate our website at [Video Game Hub](https://video-game-hub.onrender.com/)
+Or please just locate our website at https://video-game-hub.onrender.com/
 
 ## Credits
 Brandon Kelly - https://github.com/bkness \

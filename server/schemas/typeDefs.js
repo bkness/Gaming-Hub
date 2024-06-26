@@ -1,4 +1,5 @@
 const typeDefs = `
+
 type User {
     _id: ID!
     username: String!
@@ -75,11 +76,7 @@ type Game {
     updatedAt: String
   }
 
-  type LogoutResponse {
-    success: Boolean
-    message: String
-  }
- 
+
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
@@ -93,8 +90,6 @@ type Game {
     deleteComment(id: ID!): ID!
     deleteFromWishlist(gameId: ID!): User
     deleteFromCurrentlyPlaying(gameId: ID!): User
-    logout: LogoutResponse
-
 }
 `
 

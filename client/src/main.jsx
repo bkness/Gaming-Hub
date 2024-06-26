@@ -6,16 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-// all of the apps pages get pathed here for routing 
 import HomePage from './pages/HomePage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
-import BlogPage from './pages/BlogPage.jsx'; 
+import BlogPage from './pages/BlogPage.jsx'; // list path here 
 import CreatePostPage from './pages/CreatePostPage.jsx';
 import UserPostsPage from './pages/UserPosts.jsx';
 import SoloThread from './pages/SoloThread.jsx';
 import NewsPage from './pages/NewsPage.jsx';
 
-//router for app page change functionality 
 const router = createBrowserRouter([
   {
     path: '/',

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-// simple update form for updateing a post by postId 
 const UpdatePostForm = ({ post, updatePost }) => {
   const [content, setContent] = useState(post.content);
 

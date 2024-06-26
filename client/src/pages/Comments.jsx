@@ -1,4 +1,3 @@
-// form to handle comments
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_COMMENTS, QUERY_ME } from '../utils/queries';
@@ -6,7 +5,6 @@ import { DELETE_COMMENT, UPDATE_COMMENT } from '../utils/mutations';
 import Button from '@mui/material/Button';
 import UpdateCommentForm from './UpdateCommentForm';  
 
-// comments get displayed by post id 
 const Comments = ({ postId }) => {
     const { loading: meLoading, error: meError, data: meData } = useQuery(QUERY_ME);
     const currentUserId = meData?.me?._id || null;
@@ -36,7 +34,6 @@ const Comments = ({ postId }) => {
 
     const comments = data?.comments;
 
-    // function to handle delete 
     const handleDeleteComment = async (commentId) => {
         try {
             await deleteCommentMutation({
@@ -48,7 +45,6 @@ const Comments = ({ postId }) => {
         }
     };
 
-    // function to handle update 
     const handleUpdateComment = (commentId) => {
         console.log("Update comment clicked for comment ID:", commentId);
         setEditingCommentId(commentId);

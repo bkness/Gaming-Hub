@@ -6,7 +6,6 @@ import Button from '@mui/material/Button';
 import Navbar from './Navbar';
 import UpdatePostForm from './UpdatePostForm';
 
-// grabs post of specific users post by using the GET_USER_POSTS front and back end query
 const UserPostPage = () => {
   const [deletePost] = useMutation(DELETE_POST, {
     update(cache, { data: { deletePost } }) {
@@ -18,7 +17,7 @@ const UserPostPage = () => {
       });
     },
   });
-  // logic for handling the updated cashe and single post query
+
   const [updatePost] = useMutation(UPDATE_POST, {
     update(cache, { data: { updatePost } }) {
       const { getMyPost } = cache.readQuery({ query: GET_USER_POSTS });
@@ -35,7 +34,6 @@ const UserPostPage = () => {
   const [isUpdateFormOpen, setIsUpdateFormOpen] = useState(false); 
   const [selectedPost, setSelectedPost] = useState(null); 
 
-  // handles the delete for user posts
   const handleDelete = async (postId) => {
     try {
       await deletePost({
